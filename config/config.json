@@ -1,0 +1,21 @@
+{
+    "trackingMethod": [
+        "spatio_temp_hessian"
+    ],
+    "size_ROI" : 6,
+    "optTracking": {
+        "minSizeTrack":15,
+        "options_Spatiotemp": {
+            "sigmas" : 1 ,
+            "tau"              : 0.3
+        }
+    },
+    "interpolationMethod": [
+        "spline"
+    ],
+    "optInterpolation": {
+        "splineFrequency":45,
+        "smoothFactor": 10,
+        "interpFactor" : 10
+    }
+}

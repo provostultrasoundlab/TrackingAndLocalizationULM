@@ -1,0 +1,10 @@
+resources/**
+*.ptx
+*.prj
+*.asv
+*.mp4
+*.mat
+*.pyc
+local_config.json
+*.mexw64
+*.mexa64
