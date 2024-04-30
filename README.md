@@ -12,7 +12,7 @@ If you use the code, please cite the corresponding papers:
 ## Cloning the repository
  This repository contains submodules so use : 
 
-`git clone --recurse-submodules git@github.com:provostultrasoundlab/Article_Alexis.git`
+`git clone --recurse-submodules git@github.com:provostultrasoundlab/TrackingAndLocalizationULM.git`
 
 Here is the list of the different submodules : 
 - BEGPUThinning.git : [M. G. Wagner, "*Real-Time Thinning Algorithms for 2D and 3D Images using GPU processors*", J Real-Time Image Proc (2019), (10.1007/s11554-019-00886-7)](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7962620/)
