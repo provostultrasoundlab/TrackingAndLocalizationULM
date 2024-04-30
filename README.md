@@ -1,4 +1,4 @@
-# Article_Alexis
+# TrackingAndLocalizationULM
 This is the joint repository for the paper : [A. Leconte, J. Porée, B. Rauby, A. Wu, N. Ghigo, P. Xing, C. Bourquin, G. Ramos-Palacios, A. F. Sadikot, J. Provost,  "*A Tracking prior to Localization workflow for Ultrasound Localization Microscopy*", (arXiv:2308.02724)](https://arxiv.org/abs/2308.02724)
 
 If you use the code, please cite the corresponding papers:
