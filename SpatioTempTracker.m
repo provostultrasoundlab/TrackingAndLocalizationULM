@@ -41,6 +41,7 @@ function [tracks] = SpatioTempTracker(varargin)
             warning('Default size_ROI for radial Symmetry used : 30 for lambda over 4 beamforming')
             LocParam.size_ROI = 30;
         end
+        % Set LocParam.debug to ParamULM.debug if available; otherwise, default to false.
         try LocParam.debug = ParamULM.debug;
         catch
             LocParam.debug = false;
