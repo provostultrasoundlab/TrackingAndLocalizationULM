@@ -97,7 +97,7 @@ classdef Spatiotemp_traj < handle
             
             IQ = p.Results.IQ;
             opt = p.Results.opt;
-            
+            debug = opt.debug;
             % create a temporary cell array already populated with nans
             t_segs = cellfun(@(x) x*nan, obj.segs, 'UniformOutput', false);
 
@@ -135,6 +135,14 @@ classdef Spatiotemp_traj < handle
                                 
                                 % otherwise, overwrite
                                 t_segs{idt}(idb,:) = sub_px;
+                                if debug && mod(idt*idb,1000)==0
+                                    figure(1002);clf;
+                                    imagesc(imfilter(IntensityROI,2));
+                                    hold on;
+                                    scatter(ceil(opt.size_ROI/2)+Zc,ceil(opt.size_ROI/2)+Xc)
+                                    title(sprintf('Track %d, Bubble %d', idt, idb));
+                                    drawnow;
+                                end
                             end
                         end
                     end
