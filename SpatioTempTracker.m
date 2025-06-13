@@ -1,6 +1,6 @@
 function [tracks] = SpatioTempTracker(varargin)
     % Alexis LECONTE 2024
-    % Article reference : https://arxiv.org/abs/2308.02724 
+    % Article reference : https://ieeexplore.ieee.org/document/10669597 
     % SpatioTempTracker - 1 - Enhance the microbubble signals in the absolute value of the IQ post SVD data (Hessian and Jerman function)
     % SpatioTempTracker - 2 - Segment the microbubbles trajectories with a centerline algorithm (pixelic centerline)
     % SpatioTempTracker - 3 - Localize the microbubbles with a radial symetry algorithm (sub-wavelength localization) from the centerline detected positions.
@@ -20,7 +20,7 @@ function [tracks] = SpatioTempTracker(varargin)
     
     % ------- WARNING ------
     % !!! make sure the pixels grid is ISOMETRIC !!
-    %% Updated in 30/04/2024
+    %% Updated in 13/06/2025
         %% Add path
         addpath(genpath(pwd)) 
         %% Initialisation param and data 
@@ -41,8 +41,12 @@ function [tracks] = SpatioTempTracker(varargin)
             warning('Default size_ROI for radial Symmetry used : 30 for lambda over 4 beamforming')
             LocParam.size_ROI = 30;
         end
-    
-        LocParam.sizeEns              = 1;
+        % Set LocParam.debug to ParamULM.debug if available; otherwise, default to false.
+        try LocParam.debug = ParamULM.debug;
+        catch
+            LocParam.debug = false;
+        end
+        LocParam.sizeEns              = 3;
         %% Hessian and Jerman function
         Vfiltered=lib.trajectories_filter(abs_iq,options_Spatiotemp);
         

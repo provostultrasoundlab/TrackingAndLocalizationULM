@@ -1,6 +1,7 @@
 [submodule "BEGPUThinning"]
 	path = BEGPUThinning
-	url = git@github.com:mwagner9/BEGPUThinning.git
+	url = git@github.com:bricerauby/BEGPUThinning.git
+	branch = dev
 [submodule "JermanEnhancementFilter"]
 	path = JermanEnhancementFilter
 	url = git@github.com:timjerman/JermanEnhancementFilter.git
