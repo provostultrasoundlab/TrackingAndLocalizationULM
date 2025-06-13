@@ -2,7 +2,7 @@
     "trackingMethod": [
         "spatio_temp_hessian"
     ],
-    "size_ROI" : 15,
+    "size_ROI" : 11,
     "optTracking": {
         "minSizeTrack":20,
         "options_Spatiotemp": {
